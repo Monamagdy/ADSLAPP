@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#d80d1b</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_with_30_op">#30ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red_text">#E61000</color>
+    <color name="gray_text">#7E7E7E</color>
+    <drawable name="red_text">#E61000</drawable>
+    <color name="red_D0011B">#D0011B</color>
+    <color name="black_text">#4A4A4A</color>
+    <color name="light_grey">#C7C7CD</color>
+    <color name="aqua">#00AFCA</color>
+
+    <color name="purple">#9C2BA1</color>
+    <color name="black_transparent">#73000000</color>
+    <color name="off_white">#F6F6F9</color>
+    <color name="grey_text">#A4AAB3</color>
+    <color name="light_white">#FBFBFB</color>
+    <color name="bassma">#7fd543</color>
+    <color name="warning_color">#f4511e</color>
+    <color name="hint_color">#42000000</color>
+    <color name="success_color">#009688</color>
+    <color name="gray">#EFEFF4</color>
+    <color name="grey_mid">#8F8E94</color>
+    <color name="grey_979797">#979797</color>
+    <color name="grey_F2F2F2">#F2F2F2</color>
+    <color name="grey_F6F6F6">#F6F6F6</color>
+    <color name="grey_7E7E7E">#7E7E7E</color>
+    <color name="grey_D8D8D8">#D8D8D8</color>
+    <color name="grey_9B9B9B">#9B9B9B</color>
+    <color name="grey_636363">#636363</color>
+    <color name="grey_EAEAEA">#EAEAEA</color>
+    <color name="lime_b1ea0f">#b1ea0f</color>
+</resources>
