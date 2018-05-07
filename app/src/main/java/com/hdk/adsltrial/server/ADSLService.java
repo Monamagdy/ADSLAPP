@@ -10,6 +10,6 @@ public interface ADSLService {
     @POST("/")
     Call <Void> sendRouterData (@Body DiagnosticData data);
 
-    @POST("/")
+    @POST("feedback")
     Call <Void> sendFeeback (@Body FeedbackData data);
 }
