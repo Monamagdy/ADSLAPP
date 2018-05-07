@@ -18,7 +18,7 @@ import com.hdk.adsltrial.router.RouterCommands;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity {
+public class SetupRouterActivity extends AppCompatActivity {
 
     // UI references.
     private EditText mWifiNameView;

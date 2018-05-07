@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_setup) {
-            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+            Intent intent = new Intent(MainActivity.this,SetupRouterActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_troubleshoot) {
             Intent intent = new Intent(MainActivity.this,TroubleshootActivity.class);

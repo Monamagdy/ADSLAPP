@@ -24,10 +24,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".SetupRouterActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name=".TroubleshootActivity" />
+        <activity android:name=".TroubleshootActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
     </application>
 

@@ -9,4 +9,8 @@ public class DSLinfo {
     String DownNoise;
     String UpAtten;
     String DownAtten;
+
+    public String getStatus() {
+        return Status;
+    }
 }

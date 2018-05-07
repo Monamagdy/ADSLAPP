@@ -1,6 +1,7 @@
 package com.hdk.adsltrial.router;
 
-import java.net.SocketException;
+import android.util.Log;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,11 +18,29 @@ public class RouterCommands {
         this.username = username;
         this.password = password;
 
-        reconnect();
+        reconnect(1);
     }
 
-    public void reconnect() {
-        telnet = new TelnetClient(ip, username, password);
+    public boolean reconnect(int tries) {
+
+        for(int i = 0; i < tries; i++) {
+
+            try {
+                telnet = new TelnetClient(ip, username, password);
+
+                return true;
+            } catch(RouterException rexp) {
+                Log.v("RouterCommand", "Trying to reconnect...");
+            }
+
+            try {
+                Thread.sleep(1000);
+            }catch(InterruptedException iexp) {
+
+            }
+        }
+
+        return false;
     }
 
     public boolean ping(String ip) {
