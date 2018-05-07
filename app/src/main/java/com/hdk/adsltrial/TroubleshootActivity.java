@@ -3,7 +3,9 @@ package com.hdk.adsltrial;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.CheckBox;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -19,12 +21,15 @@ import com.hdk.adsltrial.router.RouterCommands;
 
 public class TroubleshootActivity extends AppCompatActivity {
 
-    CheckBox checkBox;
+    ImageView statusImage;
     TextView tv;
     TextView qty;
     TableLayout ll;
     TableRow row;
     TableRow.LayoutParams lp;
+
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,96 +37,113 @@ public class TroubleshootActivity extends AppCompatActivity {
          ll = findViewById(R.id.table_layout);
 
         addRowsDynamically();
-
     }
+
     public void addRowsDynamically(){
        getRouterStatus();
     }
+
     public void getRouterStatus(){
 
         new AsyncTask() {
             @Override
             protected Object doInBackground(Object[] objects) {
 
-                RouterCommands router = RouterFactory.getInstance();
+            RouterCommands router = RouterFactory.getInstance();
+            String msg = "Updated successfully.";
 
-                String msg = "Updated successfully.";
+            try {
 
-                try {
-                    DSLinfo result = router.displayDSL();
-                    String status = result != null? result.getStatus() : null;
+                // adsl info
+                displayMessage("Getting ADSL info..", "");
+                DSLinfo result = router.displayDSL();
+                String status = result != null? result.getStatus() : null;
+                setProgress(true);
 
-                    if(status != null && status.equals("DSL down!")) {   //getting adsl info
-                        runOnUiThread(new Runnable() {
+                if(status != null && status.equals("DSL down!")) {   //getting adsl info
+                    // ping the server
+                    displayMessage("Testing Connection", "No connection");
+                    Boolean pingStatus =  router.ping("8.8.8.8");
+                    setProgress(true);
 
-                            @Override
-                            public void run() {
-                                displayMessage("Getting ADSL info..", "");
-                            }
-                        });
+                    if(!pingStatus) {    //testing connection - no connection
 
-                        Boolean pingStatus =  router.ping("8.8.8.8");
-                        if(!pingStatus){    //testing connection - no connection
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    displayMessage("Testing Connection", "No connection");
-                                }
-                            });
+                        displayMessage("Restarting Router...", "");
+                        Boolean restartRouter = router.reboot();  //restarting router
+                        setProgress(true);
 
-                      Boolean restartRouter = router.reboot();  //restarting router
-                            runOnUiThread(new Runnable() {
+                        displayMessage("Reconnecting to router", "");
+                        router.reconnect(20);
+                        setProgress(true);
 
-                                @Override
-                                public void run() {
-
-                                    displayMessage("Restarting Router...","");
-                                }
-                            });
-
-                            router.reconnect(20);
-                            Boolean pingStatus2 =  router.ping("8.8.8.8");
-
-                        if(!pingStatus2){
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    displayMessage("Testing Connection", "No connection");
-                                    displayMessage("Let's check the router", "");
-                                }
-                            });
-                        }
+                        // ping again
+                        displayMessage("Testing Connection", "No connection");
+                        Boolean pingStatus2 = router.ping("8.8.8.8");
+                        setProgress(true);
+                        if (!pingStatus2) {
+                            displayMessage("Let's check the router", "");
                         }
                     }
-
-                } catch(DisconnectedException dexp) {
-
-                    Toast.makeText(getBaseContext(),
-                            msg, Toast.LENGTH_LONG).show();
                 }
 
-                return null;
+            } catch(DisconnectedException dexp) {
+
+                Toast.makeText(getBaseContext(),
+                        msg, Toast.LENGTH_LONG).show();
+            }
+
+            return null;
             }
         }.execute();
+    }
 
+    public void displayMessage(final String message1, final String message2) {
 
-}
-        public void displayMessage(String message1, String message2){
-            row= new TableRow(this);
-            lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
-            row.setLayoutParams(lp);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                row= new TableRow(TroubleshootActivity.this);
+                lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+                row.setLayoutParams(lp);
 
-            checkBox = new CheckBox(this);
-            tv = new TextView(this);
-            checkBox = new CheckBox(this);
-            tv = new TextView(this);
-            qty = new TextView(this);
-            checkBox.setText(message1);
-            qty.setText(message2);
-            row.addView(checkBox);
-            row.addView(qty);
-            //row.addView(addBtn);
-            ll.addView(row);
+                statusImage = new ImageView(TroubleshootActivity.this);
+
+                //progressBar = new ProgressBar(TroubleshootActivity.this);
+                //progressBar.setIndeterminate(true);
+
+                tv = new TextView(TroubleshootActivity.this);
+                tv.setText(message1);
+
+                qty = new TextView(TroubleshootActivity.this);
+                qty.setText(message2);
+
+                row.addView(statusImage);
+                row.addView(tv);
+                //row.addView(qty);
+                //row.addView(addBtn);
+                ll.addView(row);
+            }
+        });
+    }
+
+    public void setProgress(final boolean done) {
+
+        try {
+            Thread.sleep(2000);
+        } catch(InterruptedException iexp) {
+            // ignore
         }
 
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                progressBar.setVisibility(View.GONE);
+                if (done)
+                    statusImage.setImageResource(R.mipmap.ic_done);
+                else
+                    statusImage.setImageResource(R.mipmap.ic_error);
+            }
+        });
+    }
 }
