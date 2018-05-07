@@ -2,8 +2,8 @@ package com.hdk.adsltrial.router;
 
 public class RouterInfo {
 
-    String model;
-    String firmwareVersion;
-    String Mac;
-    String firmwareDate;
+    public String model;
+    public String firmwareVersion;
+    public String Mac;
+    public String firmwareDate;
 }

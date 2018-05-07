@@ -35,4 +35,6 @@
     <color name="grey_636363">#636363</color>
     <color name="grey_EAEAEA">#EAEAEA</color>
     <color name="lime_b1ea0f">#b1ea0f</color>
+
+    <color name="yellow">#ffea00</color>
 </resources>

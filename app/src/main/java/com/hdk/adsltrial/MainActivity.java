@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.codemybrainsout.ratingdialog.RatingDialog;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -90,10 +92,15 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_management) {
 
+        } else if (id == R.id.nav_feedback) {
+            Intent intent = new Intent(MainActivity.this,FeedbackActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
