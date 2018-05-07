@@ -1,5 +1,6 @@
 package com.hdk.adsltrial.router;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 
@@ -27,8 +28,8 @@ public class TelnetClient {
 
             // Advance to a prompt
             readUntil(prompt);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch(IOException e) {
+            throw new RouterException("Please connect to the router first.");
         }
     }
 
@@ -48,30 +49,22 @@ public class TelnetClient {
                 }
                 ch = (char) in.read();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            new DisconnectedException(e.getMessage());
         }
         return null;
     }
 
     public void write(String value) {
-        try {
-            out.println(value);
-            out.flush();
-            System.out.println(value);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        out.println(value);
+        out.flush();
+        System.out.println(value);
     }
 
     public String sendCommand(String command) {
-        try {
-            write(command);
-            return readUntil(prompt);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+        write(command);
+        return readUntil(prompt);
     }
 
     public void disconnect() {
