@@ -1,3 +1,5 @@
+package com.hdk.adsltrial.router;
+
 public class DSLinfo {
     String Modulation;
     String UpRate;
