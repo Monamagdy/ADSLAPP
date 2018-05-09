@@ -1,27 +1,386 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">ADSLtrial</string>
-
+    <string name="buttons_loading">Loading</string>
+    <string name="buttons_retry">retry</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- Transportation related strings -->
+    <string name="transportation.screen.title">Transportation</string>
+    <string name="transportation.screen.bus.title">Bus</string>
+    <string name="transportation.screen.car.title">Car</string>
+    <string name="transportation.available.buses.screen.title">Available buses</string>
+    <string name="transportation.bus.arrival.btn">Arrival</string>
+    <string name="transportation.bus.departure.btn">Departure</string>
+    <string name="transportation.type.your.location">Type your location</string>
+    <string name="transportation.type.your.destination">Type your destination</string>
+    <string name="transportation.my.location.now">My location now</string>
+    <string name="transportation.my.destination">My destination</string>
+    <string name="transportation.my.arrival.time">My arrival time</string>
+    <string name="transportation.return.back">wanna return back?</string>
+    <string name="transportation.return.dest">My return destination</string>
+    <string name="transportation.return.time">My return time</string>
+    <string name="transportation.destination.spinner.label">I want to go to</string>
+    <string name="transportation.source.spinner.label">I am at</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_login">Change Wifi Name and password</string>
+    <string name="transportation.arrival.time.spinner.label">I want to arrive at</string>
+    <string name="transportation.departure.time.spinner.label">I want to departure at</string>
 
+    <string name="transportation.find.bus.btn">Find my Bus</string>
+    <string name="transportation.request.car">REQUEST CAR</string>
+    <string name="transportation.driver.name">Driver name</string>
+    <string name="transportation.stations">Stations</string>
+    <string name="transportation.dialog.request.card.title">Request Sent</string>
+    <string name="transportation.dialog.request.card.desc">Someone from Fleet management will call you shortly</string>
+    <string name="permission_rationale">Vodafoners needs to access your calls in order to be able to make phone calls through the app
+    </string>
+
+    <string name="transportation.car.arrival.time">I want the car to there </string>
+
+
+    <!-- Login Related Strings -->
     <string name="login.name.input.hint">Username</string>
     <string name="login.name.edittext.hint">Your username</string>
     <string name="login.password.input.hint">Password</string>
     <string name="login.password.edittext.hint">Type your password</string>
+    <string name="login.title.we.are.at">We are at</string>
+    <string name="login.title.our.best">Our Best</string>
+    <string name="login.title.when.you.are.at.yours">When you are at yours</string>
+    <string name="login.password.error">Please enter valid password</string>
+    <string name="login.username.error">Please enter valid username</string>
+    <string name="login.verification.code.error">Please enter valid Code</string>
+    <string name="login.verification.code.resened">Resend passcode</string>
+    <string name="login.verification.code.sent">sent</string>
+    <string name="login.verification.code.tryagain">Try again</string>
+    <string name="login.pass.code.tool.first.txt">Enter your</string>
+    <string name="login.pass.userlocked">Your account is locked you can try in </string>
+    <string name="login.pass.code.tool.second.txt">Passcode</string>
+    <string name="login.pass.code.tool.third.txt">You received via SMS</string>
+    <string name="login.pass.code.save.fingerprint.dialog">Do you want to save your fingerprint?</string>
+    <string name="payslip.password.dialog.titile">Enter your password</string>
+    <string name="dialog.payslip.password.desc">You need to enter your password\n to access payslip.</string>
+    <string name="update_dialog_title"><![CDATA[A new update of The Vodafoners’ App is here!]]></string>
+    <string name="update_required_txt">Update the app and enjoy the new features!</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_wifi_name">WiFi Name</string>
-    <string name="prompt_wifi_password">WiFi Password</string>
-    <string name="action_submit_changes">Submit</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="jan">January</string>
+    <string name="feb">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="agu">August</string>
+    <string name="sep">September</string>
+    <string name="oct">October</string>
+    <string name="nov">November</string>
+    <string name="dec">December</string>
+
+    <string name="updates.screen.title">Vodafone News</string>
+    <string name="updates.screen.desc">Knock knock!!</string>
+
+    <!-- Sidemenu Related Strings -->
+    <string name="sidemenu.home">Home</string>
+    <string name="sidemenu.payslip">Payslip</string>
+    <string name="sidemenu.transportation">Transportation</string>
+    <string name="sidemenu.offers">Offers</string>
+    <string name="sidemenu.updates">Updates</string>
+    <string name="sidemenu.support">Support</string>
+    <string name="sidemenu.utilities">My Utilities</string>
+
+    <!-- Home Related Strings -->
+    <string name="home.greeting.msg">Welcome back,</string>
+    <string name="home.check.all.updates">CHECK ALL NEWS</string>
+
+    <!-- Benefits Related Strings -->
+    <string name="benefit.screen.title">Benefits</string>
+    <string name="benefits.screen.desc">All your benefits in one place!</string>
+    <string name="benefits.alico.data.title">Medical\nNetwork</string>
+    <string name="benefits.alico.data.desc">MetLife medical insurance</string>
+    <string name="benefits.ask.hr.title">AskHR</string>
+    <string name="benefits.ask.hr.desc">Browse FAQs</string>
+    <string name="benefits.food.title">Food</string>
+    <string name="benefits.food.desc">Discover restaurants</string>
+    <string name="benefits.gym.title">Gym</string>
+    <string name="benefits.gym.desc">Join &amp; get fit</string>
+    <string name="benefits.offers.title">Offers</string>
+    <string name="benefits.offers.desc">The Power of your ID</string>
+    <string name="benefits.daycare.title">Day Care &amp;\nNurseries</string>
+    <string name="benefits.daycare.desc">For your kids</string>
+    <string name="benefits.atm.title">ATM</string>
+    <string name="benefits.atm.desc">Nearby ATM around you</string>
+    <string name="benefits.holiday.title">Holidays</string>
+    <string name="benefits.holiday.desc">Public vacations</string>
+    <string name="benefits.contacts.title">Contacts</string>
+    <string name="benefits.contacts.desc">Important numbers</string>
+    <string name="benefits.careers.title">Careers</string>
+    <string name="benefits.ketaby.desc">Add to your reading list</string>
+
+    <string name="phone.program.screen.title">Phone Program</string>
+    <string name="phone.program.eligibility.date">Eligibility date</string>
+
+
+    <!-- Updates Related Strings -->
+    <string name="updates.check.weekly.updates">Check our weekly updates, just for you</string>
+    <string name="offers.expire.date.label">Expire within</string>
+    <string name="offers.screen.title">Offers</string>
+
+
+    <string name="dialog.confirm">Confirm</string>
+    <string name="dialog.ok">Ok</string>
+    <string name="dialog.done">Done</string>
+    <string name="dialog.yes">Yes</string>
+    <string name="dialog_trun_on">Turn on</string>
+    <string name="dialog.no">No</string>
+    <string name="dialog.cancel">Cancel</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+    <string name="fingerprint.msg">Confirm fingerprint to continue</string>
+
+    <!-- PaySlip related Strings -->
+    <string name="payslip.date.label">Show Me</string>
+    <string name="payslip.netpay">Net pay</string>
+    <string name="payslip.deductions">Deductions</string>
+    <string name="payslip.total">Total</string>
+    <string name="payslip.staff_id">Staff ID: </string>
+
+    <string name="payslip.not.eligible">You are not eligible for this service</string>
+
+    <string name="payslip_privatekey">MIICWgIBAAKBgHlC9w3Oq062ppsXl99UrSkXSC0+xQ7lqDOk4T5/5RrT41/QmSAV
+x/4Vkjz4n26++tECXuGpuIZooWFdcabPXQwylq6zHZwDOCwB2AS4XmOCiN5iu+Y1
+aDyiGQ0P65rhxbhgRvioxgHRqgjIIAjfguvoEl6IdMKQDQbSpeIH5h7vAgMBAAEC
+gYBp1921G5PDnQJHlYxmz45ls4C4nXV7z1HF4kEJQLFFfXWWCInfy6NJUKLYvVrM
+W76p+RvAdVgvWdyjE+FD7PQVm6LC3ah57c5sblMcwFwhnWmQVWj3g79HeFvyoMBT
+Be2B1zYkj/BliDIB0HbR2ElawXKsojqbiIH3vYwJwHwlAQJBANefN01nDvOGLzYj
+j1emjFv2eJrILlq2im0osdDkZ5kyz6viaQnJqVZ8eyi3o48cabUvuAYT7zkHa6DD
+USE7ReECQQCP+CvWAg8C4G4fZLbhHfAiItl/KU8mJs6UzO9oi30UHzwZ+u3cE7ex
+b/3+Pl9Ef/xcCHKcVn0mvJHVu4JvUF7PAkA6/bpZmNqEUa/U9gGfj1dTSalRX3cf
+JlXU649KgVK+nSIn+neWT+/eU4w2ZZd/7dwV0Apez1FhnuAZSZaGqvrBAkBwqc70
+HIxOvf6vhosuw9TlgcwenN8ZhgjnnTBE6dOp6X+I/TsinDOGIZPsYDcBTf7Yrqux
++GTb6Xlefuxl28k1AkB2Wgc6vkQrbTlJBeH6ZDF9tvXvc2xptsBqZle+mq+hDtd5
+LLlzPlSl2rdsItuVjA7kjfenDm0PYvny+M1DolyJ
+</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="ask.hr.filter.by.keyword">Filter by keyword</string>
+    <string name="ask.hr.screen.desc">We\'re going digital! \nBrowse through \'myHR\' , scroll \nthrough the FAQs below or issue \na Trouble Ticket using the AskHR TSS tool or chat \nwith one of our colleagues using the Web Chat service \nor called on 2882.</string>
+
+
+    <!-- GYM Related Strings -->
+    <string name="gym.daily.schedule.title">Daily Schedule</string>
+    <string name="gym.daily.schedule.desc">Know the time slots that best suits your schedule</string>
+
+    <string name="gym.availble.classes.title">Available Classes</string>
+    <string name="gym.availble.classes.desc">Have some workouts and learn from world-class instructions in a fun and fast paced environment</string>
+    <string name="gym.git.fit.btn"> Get fit &amp; join</string>
+    <string name="gym.main.title">Gym</string>
+    <string name="gym.main.desc">Want some workouts?\ncheck Vodafone’s gym’s\nschedule and classes</string>
+    <string name="gym.classes.screen.title">Gym Classes</string>
+    <string name="gym.waiting.to.see.you">Waiting to see you </string>
+    <string name="gym.please.fill.info">Please fill the information below\n to submit your request </string>
+    <string name="please.fill.empty.fields">Please enter valid data </string>
+    <string name="gym.request.sent.successfully">Your request sent successfully</string>
+    <string name="please.enter.valid.date">Please enter valid date </string>
+
+    <string name="gym.please.enter.valid.email">Please enter valid email</string>
+    <string name="gym.dialog.request.sent.title">Gym Request </string>
+    <string name="send.feedback.dialog.request.sent.title">Restaurant feedback</string>
+
+    <string name="gym.dailog.request.sent.desc">You’ll receive an email with all the details</string>
+
+    <string name="gym.fullname.hint">Full name</string>
+    <string name="gym.email.hint">Email Address</string>
+    <string name="gym.phone.hint">Contact number</string>
+    <string name="gym.staff_id.hint">Staff ID Number</string>
+    <string name="gym.department.hint">Department</string>
+    <string name="gym.company.hint">Company</string>
+    <string name="gym.sendRequest.btn">Send Request</string>
+    <string name="gym.trainer.label">Trainer : </string>
+    <string name="gym.location.smart">Smart</string>
+    <string name="gym.location.horizon">Horizon</string>
+    <string name="sunday">sun</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wedday">Wed</string>
+    <string name="thursday">Thr</string>
+
+
+    <string name="metlife.box.desc">MetLife eServices Mobile App is a bilingual online service application that offers convenient and easy access to your policy benefits.</string>
+    <string name="metlife.go.to.app">GO TO APP</string>
+    <string name="metlife.number">19097</string>
+    <string name="metlife.go.question">Got Questions?</string>
+    <string name="metlife.go.question.desc_two">Mailbox or Call MetLife on </string>
+
+    <string name="metlife.go.question.desc">Send the Medical Insurance </string>
+    <string name="metlife.screen.title">MetLife</string>
+    <string name="metlife.dialog_screen_title">Call Alico</string>
+    <string name="metlife_dialog_screen_desc">Are you sure you want to call Alico hotline?</string>
+    <string name="metlife.screen.desc">Your health is your wealth.</string>
+
+
+    <string name="careers.apply.before">Apply before</string>
+    <string name="careers.screen.title">Careers</string>
+    <string name="careers.screen.desc">Keep checking our open positions.\nNever miss an opportunity.</string>
+    <string name="contacts.screen.title">Contacts</string>
+    <string name="contacts.screen.desc">Check all important contacts\n you may need.</string>
+    <string name="contacts.search.hint">Search contacts</string>
+    <!-- Restaurants Related Strings -->
+    <string name="restaurant.menu.title">MENU</string>
+    <string name="restaurant.specialty.title">Chief Speciality</string>
+    <string name="restaurant.specialty.screen.title">  SPECIALITY</string>
+    <string name="restaurant.feedback.title">FEEDBACK</string>
+    <string name="restaurant.feedback.write">Your feedback matters</string>
+    <string name="app.feedback.write">Use the field below to share with us your feedback</string>
+    <string name="app.feedback.screen.title">Feedback</string>
+    <string name="restaurant.feedback.write.placeholder">Share with us your feedback…</string>
+    <string name="restaurant.feedback.send.btn">Send</string>
+    <string name="restaurant.screen.desc">Beat your hunger!</string>
+    <string name="restaurant.no.speciality">There\'s no food speciality for today!</string>
+    <string name="feedback_success_msg_txt">Your feedback has been sent thank you. </string>
+
+    <!-- logout Dialog related strings -->
+    <string name="logout.dialog.title">Log out?</string>
+    <string name="logout.dialog.message">Are you sure you want to logout?</string>
+
+    <!-- FingerPrint Related Strings -->
+    <string name="finger_print_dialog_title">Touch ID</string>
+    <string name="finger_print_dialog_desc">Wanna use your fingerprint starting from your next login?</string>
+
+    <style name="gym_request_dialog_title">Gym Request</style>
+
+    <!-- Shortcuts Related Strings -->
+    <string name="payslip">Payslip</string>
+    <string name="careers">Careers</string>
+    <string name="atm">Nearby ATMs</string>
+    <string name="holiday">Holiday</string>
+    <string name="askHr">Ask HR</string>
+
+
+
+    <!-- Holidays Related Strings -->
+    <string name="holidays_screen_title">Holidays</string>
+    <string name="holidays_screen_desc">Plan your vacations early on.</string>
+    <!-- ATM REALATED STRINGS -->
+    <string name="atm_bank_screen_title">Nearby ATM</string>
+    <string name="atm_bank_screen_desc">Locate any ATM machine across Cairo</string>
+    <string name="atm_select_bank">Select a bank</string>
+    <string name="atm_show_results">Show Results</string>
+    <string name="atm_map_screen_title">ATMs Results</string>
+    <string name="Audi_bank">Audi</string>
+    <string name="Barclays_bank">Barclays</string>
+    <string name="CIB_bank">CIB</string>
+    <string name="atm.filter.hint">Search by location</string>
+    <string name="HSBC_bank">HSBC</string>
+    <string name="google.api.key">AIzaSyBuKRJpxts6Ajjmz7LMb4_jyM4cy2aIuvs</string>
+
+    <string name="atm_enable_location_title">Turn Location on.</string>
+    <string name="atm_enable_location_desc">Please turn your location on, we can’t reach you.</string>
+    <string name="no.filter.match">No matches ! </string>
+
+    <!-- Notifications Related Strings -->
+    <string name="notification.empty.strings">Currently you don’t have any\n messages yet</string>
+    <string name="notification.screen.title">Notifications</string>
+
+
+
+    <!-- Morning Tray Related Strings-->
+
+
+
+    <!-- Error Codes -->
+    <string name="server_error">Server error</string>
+    <string name="INCORRECT_CODE">Incorrect Passcode</string>
+    <string name="INVLAID_USERNAME">Invalid Username or Password</string>
+    <string name="PAYSLIP_REQUEST_ERROR">Seems like you entered an incorrect passcode. Try to re-enter your passcode again.</string>
+    <string name="GYM_REQUEST_ERROR">We’re not able to get your request. Try to register again. We’re sorry!</string>
+    <string name="FEEDBACK_ERROR_MSG">We want to know your feedback but we’re not able to receive it. Can you try submitting it again?</string>
+    <string name="CAR_REQUEST_ERROR">We’re facing a problem in receiving your car request. Can you try submitting it again?</string>
+    <string name="USER_LOCKED_ERROR">Your account is locked</string>
+    <string name="try_again">An error has occurred</string>
+    <string name="NO_INTERNET">There is no internet connection</string>
+
+    <!-- Switch Date Time Picker -->
+    <string name="simple_date_format" translatable="false">yyyy-MM-dd \'at\' HH:mm</string>
+
+    <!-- Title -->
+    <string name="label_datetime_dialog">DateTime</string>
+
+    <string name="positive_button_datetime_picker">OK</string>
+    <string name="negative_button_datetime_picker">Cancel</string>
+
+    <!-- Image description -->
+    <string name="img_datetime">Image datetime</string>
+
+    <string name="hour_picker_description">Hours circular slider</string>
+    <string name="select_hours">Select hours</string>
+    <string name="minute_picker_description">Minutes circular slider</string>
+    <string name="select_minutes">Select minutes</string>
+    <string name="time_placeholder" translatable="false">--</string>
+    <string name="time_separator" translatable="false">:</string>
+
+    <string name="sans_serif" translatable="false">sans-serif</string>
+    <string name="radial_numbers_typeface" translatable="false">sans-serif</string>
+    <string name="deleted_key">
+        <xliff:g example="4" id="key">%1$s</xliff:g>
+        deleted
     </string>
+
+    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+    <string name="fingerprint_success">Fingerprint recognized</string>
+    <string name="item_title">White Mesh Pluto Backpack</string>
+    <string name="item_price">$62.68</string>
+    <string name="item_description">Mesh backpack in white. Black textile trim throughout.</string>
+    <string name="new_fingerprint_enrolled_description">A new fingerprint was added to this device, so your password is required.</string>
+    <string name="use_fingerprint_in_future">Use fingerprint in the future</string>
+    <string name="use_fingerprint_to_authenticate_title">Use fingerprint to authenticate</string>
+    <string name="use_fingerprint_to_authenticate_key">use_fingerprint_to_authenticate_key</string>
+    <string name="description_bugdroid_icon">Android bugdroid image</string>
+    <string name="description_fingerprint_icon">Fingerprint icon</string>
+    <string name="title_activity_day_care">DayCareActivity</string>
+
+
+    <!-- Dat Care Related Strings -->
+    <string name="day_care_info_desc">At Vodafone, we believe in inclusion, empowering our colleagues, and creating a family friendly environment.\n\n
+        We have a number of offers with Nurseries across Egypt and our very own Day Care at our Smart Village premises.</string>
+    <string name="day_care_go_to_nursery">GO TO NURSERY</string>
+    <string name="day_care_desc">Vodafone’s Day Care in Smart Village</string>
+
+
+    <!-- Beano's Related Strings -->
+
+    <!-- Paynow popup -->
+    <string name="morning_treat">Morning Treat</string>
+    <string name="total_amount">Total order is: 45 EGP</string>
+    <string name="staff_id">Staff ID is:9399</string>
+    <string name="vodafone_cash_pin_code">Enter your vodafone cash pin code</string>
+    <string name="pick_up_location">Pick up location</string>
+    <string name="choose_the_better_time">Choose the better time for you</string>
+    <string name="cancel">Cancel</string>
+    <string name="pay_now">Pay now</string>
+    <string name="order_frequency_checkbox">Do you want this order every week on this time</string>
+
+    <!--Order Details popup -->
+    <string name="add_to_tray">ADD TO THE TRAY</string>
+    <string name="special_requests">Any special requests?</string>
+    <string name="label1">How would you like it ?</string>
+    <string name="product_name">Healthy Granola</string>
+    <string name="product_description">sdakdhakjdhasjkd</string>
+
+    <!--Thank You popup -->
+    <string name="thank_you">Thank you</string>
+    <string name="order_estimate_time">Your order will be ready at : 9:15</string>
+    <string name="pick_it_location">Pick it up from C2</string>
+    <string name="your_order_will_be_labelled_by_your_id">Your order will be labelled by your ID</string>
+    <string name="remaining_balance_vcash">You have 36EGY pounds remaning in your VF cash wallet</string>
+    <string name="done">Done</string>
+
+    <!--Error -->
+    <string name="error">Error</string>
+    <string name="error_message">Dear Employee: Your Vodafone cash wallet is less than XX amount... please recharge</string>
+
+    <!-- Cafe Drinks activity -->
+    <string name="craving">You\'re Craving...</string>
+    <string name="product_details"><![CDATA[(Homemade granola, low fat yogurt, fresh seasonal fruit or dried fruits & honey)]]></string>
+    <string name="product_price">7.50 EGY</string>
+    <string name="order_availability">This order is available now</string>
+
+
 </resources>

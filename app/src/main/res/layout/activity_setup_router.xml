@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_done"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/bg_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/bg_sm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.github.jorgecastilloprz.FABProgressCircle
+        android:id="@+id/fabProgressCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:arcColor="@color/light_grey"
+        app:arcWidth="3dp"
+        app:layout_constraintBottom_creator="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/bg_sm"
+        app:layout_constraintVertical_bias="0.19"
+        app:layout_editor_absoluteX="251.3dp"
+        app:layout_editor_absoluteY="433.9dp"
+        app:roundedStroke="true"
+        tools:layout_constraintRight_creator="2"
+        tools:layout_editor_absoluteX="251.3dp"
+        tools:layout_editor_absoluteY="433.9dp">
+
+        <!-- You can change it with the fab from the library you want to use -->
+        <ImageView
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_shape"
+            android:padding="20.4dp"
+            android:src="@drawable/ic_next" />
+
+    </com.github.jorgecastilloprz.FABProgressCircle>
+
+
+    <LinearLayout
+        android:id="@+id/email_inputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="197dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            fontPath="fonts/VodafoneRg.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="WiFi Name"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/font_size_14" />
+
+        <EditText
+            android:id="@+id/wifi_name"
+            fontPath="fonts/VodafoneLt.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/aqua"
+            android:hint="Your new WiFi Network Name"
+            android:inputType="text"
+
+            android:textColor="@color/black"
+
+            android:textColorHint="@color/light_grey"
+            android:textCursorDrawable="@drawable/edittext_cursor_background"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/password_inputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_inputLayout"
+        android:layout_marginEnd="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="295dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            fontPath="fonts/VodafoneRg.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="WiFi Password"
+            android:textColor="@color/black_text"
+
+
+            android:textSize="@dimen/font_size_14" />
+
+        <com.vodafone.vodafoners.ui.custom.DrawableEditText
+            android:id="@+id/wifi_password"
+            fontPath="fonts/VodafoneLt.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/aqua"
+            android:drawableRight="@drawable/ic_show"
+            android:hint="Your new WiFi Password"
+            android:imeOptions="actionGo"
+
+            android:inputType="textPassword"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_grey"
+            android:textCursorDrawable="@drawable/edittext_cursor_background"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

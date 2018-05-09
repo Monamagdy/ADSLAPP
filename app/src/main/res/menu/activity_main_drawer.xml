@@ -6,37 +6,12 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_setup"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_launcher"
             android:title="Setup" />
         <item
             android:id="@+id/nav_troubleshoot"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_launcher"
             android:title="Troubleshoot" />
-        <item
-            android:id="@+id/nav_management"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Management" />
-        <item
-            android:id="@+id/nav_feedback"
-            android:icon="@mipmap/ic_feedback"
-            android:title="Feedback" />
-        <!--<item-->
-            <!--android:id="@+id/nav_manage"-->
-            <!--android:icon="@drawable/ic_menu_manage"-->
-            <!--android:title="Tools" />-->
     </group>
-
-    <!--<item android:title="Communicate">-->
-        <!--<menu>-->
-            <!--<item-->
-                <!--android:id="@+id/nav_share"-->
-                <!--android:icon="@drawable/ic_menu_share"-->
-                <!--android:title="Share" />-->
-            <!--<item-->
-                <!--android:id="@+id/nav_send"-->
-                <!--android:icon="@drawable/ic_menu_send"-->
-                <!--android:title="Send" />-->
-        <!--</menu>-->
-    <!--</item>-->
 
 </menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="sidemenuItemsNames">
+        <item>Home</item>
+        <item>My Benefits</item>
+        <item>Transportation</item>
+        <item>Phone Program</item>
+        <item>Offers</item>
+        <item>Contacts</item>
+        <item>Feedback</item>
+        <item>Log out</item>
+
+    </array>
+
+    <array name="TransportationReturnBackChoises">
+        <item>Yes, please</item>
+        <item>No, Thanks</item>
+    </array>
+
+    <array name="employerType">
+        <item>Employment</item>
+        <item>Sub-Contractor</item>
+    </array>
+
+    <array name="Locations">
+        <item></item>
+        <item>Facilities</item>
+        <item>C2</item>
+    </array>
+    <array name="Times">
+        <item>Time- Now</item>
+        <item>in 5 minutes</item>
+        <item>in 10 minutes</item>
+        <item>in 15 minutes</item>
+    </array>
+    <array name="departmentArray">
+        <item>Commercial Operations</item>
+        <item>External Affairs</item>
+
+        <item>Strategy</item>
+        <item>Finance</item>
+        <item>Enterprise Business Unit</item>
+        <item>HR</item>
+        <item>Consumer Marketing</item>
+        <item>Technology</item>
+        <item>VSSE</item>
+
+    </array>
+</resources>

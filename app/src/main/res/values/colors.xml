@@ -14,6 +14,7 @@
     <color name="black_text">#4A4A4A</color>
     <color name="light_grey">#C7C7CD</color>
     <color name="aqua">#00AFCA</color>
+    <color name="yellow">#ffea00</color>
 
     <color name="purple">#9C2BA1</color>
     <color name="black_transparent">#73000000</color>
@@ -35,6 +36,4 @@
     <color name="grey_636363">#636363</color>
     <color name="grey_EAEAEA">#EAEAEA</color>
     <color name="lime_b1ea0f">#b1ea0f</color>
-
-    <color name="yellow">#ffea00</color>
 </resources>

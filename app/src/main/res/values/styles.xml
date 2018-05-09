@@ -1,20 +1,162 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>
+        <item name="android:dialogTheme">@style/MyDialogTheme</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
+
+    <style name="cust_tabViewStyle">
+        <item name="android:textColor">@color/red_text</item>
+    </style>
+
+    <style name="DatePickerDialogStyle" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        <item name="colorPrimary">@color/red_text</item>
+        <item name="colorPrimaryDark">@color/red_text</item>
+        <item name="colorAccent">@color/red_text</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textColorPrimary">@color/black_text</item>
+        <item name="colorControlNormal">@color/red_text</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="colorControlActivated">@color/red_text</item>
+        <item name="android:textColorSecondary">@color/black_text</item>
+    </style>
+
+    <style name="AppTheme.Transparent.StatusBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
 
+    </style>
+
+    <style name="ToolBar_SecondTextView_Theme">
+
+        <item name="android:textSize">@dimen/font_size_40</item>
+        <item name="android:textColor">@color/red_text</item>
+    </style>
+
+    <style name="ToolBar_FirstTextView_Theme">
+
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="ToolBar_ThirdTextView_Theme">
+
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+
+    <style name="TextInputLayout_theme" parent="AppTheme">
+        <item name="android:textColorHint">@color/black</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+
+
+    <style name="InvitationDialog" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="colorAccent">@color/red_text</item>
+        <item name="android:textColorPrimary">@color/black_text</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+
+    <style name="Theme.SwitchDateTime" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+
+    <!-- Header Background -->
+    <style name="Theme.SwitchDateTime.HeaderBackground">
+        <item name="android:background">@color/red_text</item>
+    </style>
+
+    <!-- Content Background -->
+    <style name="Theme.SwitchDateTime.ContentBackground">
+        <item name="android:background">#00ffffff</item>
+    </style>
+
+    <!-- Title -->
+    <style name="Theme.SwitchDateTime.TitleDateTimeLabelText">
+        <item name="android:textSize">@dimen/title_date_time_label_text</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Icon -->
+    <style name="Theme.SwitchDateTime.IconDateTimeSwitch">
+        <item name="android:src">@drawable/ic_view_carousel_black_32dp</item>
+        <item name="android:tint">#fff</item>
+    </style>
+
+    <!-- Time  -->
+    <style name="Theme.SwitchDateTime.Time">
+        <item name="timeCircleColor">@color/red_text</item>
+        <item name="timeCenterColor">@color/red_text</item>
+        <item name="timeAmPmBackgroundColor">@color/red_text</item>
+        <item name="timeAmPmSelectBackgroundColor">@color/red_text</item> <!-- Alpha is apply-->
+        <item name="timeAmPmTextColor">@color/red_text</item>
+        <item name="timeSelectorColor">@color/red_text</item>
+        <item name="timeCircularNumbersColor">#494949</item>
+    </style>
+
+    <!-- Time Label -->
+    <style name="Theme.SwitchDateTime.TimeLabelText">
+        <item name="android:textSize">@dimen/time_label_text</item>
+        <item name="android:textColor">#e1e1e1</item>
+    </style>
+
+    <style name="Theme.SwitchDateTime.TimeLabelAmPm">
+        <item name="android:textSize">@dimen/time_label_AmPm</item>
+        <item name="android:textColor">#e1e1e1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Date -->
+    <style name="Theme.SwitchDateTime.Date">
+        <!-- <item name="mcv_selectionColor">#32b3e3</item>-->
+    </style>
+
+    <!-- Date Label -->
+    <style name="Theme.SwitchDateTime.DateLabelMonthAndDay">
+        <item name="android:textSize">@dimen/date_label_month_and_day</item>
+        <item name="android:textColor">#e1e1e1</item>
+    </style>
+
+    <!-- Year Selected-->
+    <style name="Theme.SwitchDateTime.Year">
+        <item name="colorCircleIndicator">@color/red_text</item>
+        <item name="android:textColor">#e6e6e6</item>
+    </style>
+
+    <!-- Year Label -->
+    <style name="Theme.SwitchDateTime.DateLabelYear">
+        <item name="android:textSize">@dimen/date_label_year</item>
+        <item name="android:textColor">#e1e1e1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

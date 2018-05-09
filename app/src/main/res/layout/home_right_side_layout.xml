@@ -1,57 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragments_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_bg">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingTop="60dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="60dp">
 
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-    <LinearLayout
-        android:id="@+id/closeLayout"
+    <TextView
+        android:id="@+id/welcome"
+        style="@style/Base.TextAppearance.AppCompat.Display1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11.3dp"
+        android:paddingBottom="20dp"
+        android:text="Welcome, Sherif" />
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:visibility="gone">
+        android:paddingBottom="60dp">
 
-        <ImageView
-            android:id="@+id/home_close_menu_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/arrow_right" />
-
-        <View
-            android:layout_width="10dp"
-            android:layout_height="11dp"
-            android:layout_gravity="center"
-            android:background="@android:color/transparent" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentLeft="true"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/home_notification_btn"
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="11.3dp"
-            android:layout_toLeftOf="@+id/home_close_menu_btn"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_notification"
-            android:visibility="gone" />
+            android:text="Internet Status : "
+            android:textColor="@color/black" />
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch_" />
 
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/adsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remaining Quota"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/adsl"
+            android:gravity="end"
+            android:text=" 70GB out of 150GB"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:paddingBottom="40dp"
+        android:maxHeight="50dp"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelBtn"
+            fontPath="fonts/VodafoneRgBd.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/getfit_gray_btn_drawable"
+            android:text="Test Upload Speed"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/okBtn"
+            fontPath="fonts/VodafoneRgBd.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/getfit_red_btn_drawable"
+            android:text="Test Download Speed"
+            android:textColor="@color/white" />
 
     </LinearLayout>
-</RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,8 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:dialogTheme">@style/MyDialogTheme</item>
+
     </style>
+
+
+    <style name="MyDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <style name="DatePickerDialogStyle" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        <item name="colorPrimary">@color/red_text</item>
+        <item name="colorPrimaryDark">@color/red_text</item>
+        <item name="colorAccent">@color/red_text</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textColorPrimary">@color/black_text</item>
+        <item name="colorControlNormal">@color/red_text</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="colorControlActivated">@color/red_text</item>
+        <item name="android:textColorSecondary">@color/black_text</item>
+    </style>
+
+    <style name="AppTheme.Transparent.StatusBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+    <style name="Theme.Base" parent="android:Theme.Material.Light"></style>
+
+
+    <style name="MyDialogTheme" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+    </style>
+
+
 </resources>

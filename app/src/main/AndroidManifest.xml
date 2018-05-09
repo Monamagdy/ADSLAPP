@@ -13,25 +13,24 @@
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.NoTitleBar">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/AppTheme.Transparent.StatusBar">
         </activity>
+        <activity android:name=".SplashScreen">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
         <activity
-            android:name=".SetupRouterActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".SetupRouterActivity" />
         <activity
-            android:name=".TroubleshootActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".TroubleshootActivity" />
         <activity
-            android:name=".FeedbackActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".FeedbackActivity" />
 
     </application>
 

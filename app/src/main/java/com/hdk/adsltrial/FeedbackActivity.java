@@ -1,9 +1,11 @@
 package com.hdk.adsltrial;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RatingBar;
 
 import com.codemybrainsout.ratingdialog.RatingDialog;
 import com.hdk.adsltrial.server.ElasticSender;
@@ -15,11 +17,14 @@ public class FeedbackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
-        Button feedback = (Button) findViewById(R.id.feedback_button);
+        Button feedback = findViewById(R.id.okBtn);
+        final RatingBar ratingBar = findViewById(R.id.rating_bar);
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                runFeedback();
+                //TODO send to hazem the feedback
+                Intent intent = new Intent(FeedbackActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
     }
